@@ -43,43 +43,13 @@ The argument np.set_printoptions(threshold = np.inf) aims to allow the user to v
 The function def calculate_slope(test_data) utilized the raster data that was brought in via loadtext. After ensuring the array is in 2-dimensional format,
 np.gradient establishes the difference in positional x and y value (rise and run.) 
 "edge_order = 2" Means to calculate the boundary slopes where the typical neighborhood values would be 0, using forward difference and backward difference.
-slope = np.arctan(np.sqrt(dx**2 + dy**2)) 
+for "slope = np.arctan(np.sqrt(dx**2 + dy**2)" calculates the slope using the established difference. This function returns the slope of the desired data
 
+Calling the function calculate_slope(input_data) calculates the slope of each cell in the matrix and identifies it as the variable slope_data. 
 
+To find the maximum slope of each column within the matrix of input data, "np.amax(slope_data, axis = 0)" is used. np.amax calls axis 0 ( locates the code to the columns.
 
-def calculate_slope(test_data):
-    """
-    This function calculates the slope in raster data.
-    
-    Parameters:
-    raster_data (numpy.ndarray): A 2D numpy array representing the raster data
-    
-    Returns:
-    numpy.ndarray: A 2D numpy array representing the slope of the raster data
-    """
-    try:
-        # Check if the input is a 2D numpy array
-        if not isinstance(input_data, np.ndarray) or len(input_data.shape) != 2:
-            raise TypeError("Input must be a 2D numpy array")
-        
-        # Calculate the slope using the gradient function
-        dx, dy = np.gradient(input_data, edge_order=2)
-        slope = np.arctan(np.sqrt(dx**2 + dy**2))
-        
-        return slope
-    except TypeError as e:
-        # Log the error
-        print(f"Error: {e}")
-        return None
-
-#create variable to identify slope data from input
-slope_data = calculate_slope(input_data)
-
-#print(slope_data)
-
-
-
-#finds maximum slope of in column and returns as array (axis 0)
+#finds maximum slope in each column of matrix and returns as array (axis 0)
 max_slope_columns = np.amax(slope_data, axis = 0)
 
 print (max_slope_columns)
