@@ -1,11 +1,11 @@
 # Assignment 2 #
 
-**About:** Assignment 2 
-**Contact:** Erica Anderson
-         gy22ea@leeds.ac.uk
-**Website:** NOTWRITTENYET. 
-**GIT:** https://github.com/ericaanderson/Assign2
-**Security:** MIT License
+**About:** Assignment 2   
+**Contact:** Erica Anderson  
+         gy22ea@leeds.ac.uk  
+**Website:** NOTWRITTENYET.   
+**GIT:** https://github.com/ericaanderson/Assign2  
+**Security:** MIT License  
 
 Copyright (c) 2023 ericaanderson
 
@@ -27,16 +27,16 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-**Contents:**
+**Contents:**  
 Main file contains a 'src' code file where the user will find the program 'model.py' and another file 'data'. 'Model.py' is the program the user will run to retrieve the desired results. The 'data' file, hosts two additional files, 'input' and 'output'. The provided text file is saved in 'input' as "slope" for retrieval within the program 'model.py'. The alternative file 'output' holds the resulting data from the calculations within 'model.py'. There should be two output files available named 'columnslope.txt' and 'rowslope.txt'. 
 
 The main file "Assign2" also contains a 'test' file. This file hosts the research and testing work used to develop the code displayed in model.py. In the end, a third party program NumPy was chosen to create the most efficient and clean code for the user to utilize. 
 
-**How to:**
+**How to:**  
 
 This software is designed to calculate the maximum slope values from an input text file populated with raster data and display it to the user through a GUI. 
 
-<u>To use:</u>
+<u>To use:</u>  
 This program works by reading the text file of interest using the NumPy loadtext function and assigning the variable input_data. Data is identified as integers. A print statement is available to the user is  at any time to identify the values produced in each statement. For example, to double check the consistency, the print statement "print(input_data[0][1])" should produce the second value on the matrix. 
 
 The argument np.set_printoptions(threshold = np.inf) aims to allow the user to view all matrix data so it is not concacted. 
