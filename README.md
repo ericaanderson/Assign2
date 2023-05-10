@@ -2,8 +2,7 @@
 
 **About:** Assignment 2   
 **Contact:** Erica Anderson  
-         gy22ea@leeds.ac.uk  
-**Website:** NOTWRITTENYET.   
+         gy22ea@leeds.ac.uk    
 **GIT:** https://github.com/ericaanderson/Assign2  
 **Security:** MIT License  
 
@@ -48,6 +47,13 @@ Calling the function calculate_slope(input_data) calculates the slope of each ce
 To find the maximum slope of each column within the matrix of the input data, "np.amax(slope_data, axis = 0)" is used. np.amax calls axis 0 to orient code to calculating along the columns. This calculation returns 300 data points representing the maximum slope of that column. This is corroborated by the print statement, "print (len(max_slope_columns))". Similarly, the max_slope_rows calculates the maximum slope found in each row using the familiar call "np.amax(slope_data, axis = 1)". This time, axis = 1 orients the code to checking each row of data along the matrix. 
 
 Following these calculations, the maximum slope of columns and rows are saved into their own new files 'columnslope.txt' and 'rowslope.txt', respectively, using NumPy's savetxt command. 
+
+After running through the GUI and printing any pertinent statements (which can be designated by the user), the program runs a GUI prompt. This allows the user to choose which DEM file to output. Three functions work to establish the framework of the GUI. The ‘upload_raster’ function provides the options of which file to select for reading. The ‘exit_app’ function, when called, will close the prompt. Finally, the ‘gui’ function establishes the framework for the GUI. The main menu is created using the tkinter menu designation. To add actionable items to the menu, add_command is used, labeled, and the previously designated functions ‘ upload_raster’ and ‘exit_app’ are called for each action respectively. 
+
+The output should produce a small message box with the first line of the selected file’s values. The values in these files are the maximum slope of the rows (or columns depending on the file chosen).
+
+ 
+
 
  
 
